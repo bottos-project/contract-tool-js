@@ -1,0 +1,29 @@
+{
+  "name": "contract-tool-js",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "./bin/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node tools/deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bottos-project/contract-tool-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bottos-project/contract-tool-js/issues"
+  },
+  "homepage": "https://github.com/bottos-project/contract-tool-js#readme",
+  "devDependencies": {
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "ora": "^3.0.0"
+  },
+  "dependencies": {
+    "bottos-js-crypto": "^1.0.12"
+  }
+}

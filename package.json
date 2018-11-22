@@ -5,8 +5,10 @@
   "bin": "./bin/index.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "node tools/deploy.js"
+    "test": "./node_modules/mocha/bin/mocha ./test/*.js",
+    "deployContract": "node tools/deploy.js --type=contract",
+    "deployAbi": "node tools/deploy.js --type=abi",
+    "account": "node tools/account.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,9 @@
     "ora": "^3.0.0"
   },
   "dependencies": {
-    "bottos-js-crypto": "^1.0.12"
+    "bottos-sdk-js": "^0.2.5",
+    "mocha": "^5.2.0",
+    "shelljs": "^0.8.3",
+    "yargs": "^12.0.5"
   }
 }

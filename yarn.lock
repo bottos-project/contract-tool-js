@@ -71,6 +71,10 @@ base64-js@0.0.8:
   version "0.0.8"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-0.0.8.tgz#1101e9544f4a76b1bc3b26d452ca96d7a35e7978"
 
+bignumber.js@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.npmjs.org/bignumber.js/-/bignumber.js-7.2.1.tgz#80c048759d826800807c4bfd521e50edbba57a5f"
+
 bindings@^1.2.1:
   version "1.3.0"
   resolved "https://registry.npmjs.org/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
@@ -96,6 +100,19 @@ bn.js@^4.11.3, bn.js@^4.4.0, bn.js@^4.6.4:
   version "4.11.8"
   resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
 
+bottos-crypto-js@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.npmjs.org/bottos-crypto-js/-/bottos-crypto-js-1.0.14.tgz#052f99b282e45e95e35f8877d2722d5ff274fa1c"
+  dependencies:
+    bytebuffer "^5.0.1"
+    crypto-js "^3.1.9-1"
+    eccrypto "^1.0.3"
+    google-protobuf "^3.5.0"
+    keccak "^1.4.0"
+    protobufjs "^6.8.6"
+    secp256k1 "^3.5.0"
+    uuid "^3.2.1"
+
 bottos-js-crypto@^1.0.12:
   version "1.0.12"
   resolved "https://registry.npmjs.org/bottos-js-crypto/-/bottos-js-crypto-1.0.12.tgz#c5eabd8b9f40b825f73181c73efdfe771fbfce88"
@@ -108,6 +125,21 @@ bottos-js-crypto@^1.0.12:
     protobufjs "^6.8.6"
     secp256k1 "^3.5.0"
     uuid "^3.2.1"
+
+bottos-js-msgpack@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/bottos-js-msgpack/-/bottos-js-msgpack-1.0.2.tgz#a7410450487b56e18f7f02eef93c92c6597bcc5b"
+  dependencies:
+    bignumber.js "^7.2.1"
+    long "^4.0.0"
+
+bottos-sdk-js@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/bottos-sdk-js/-/bottos-sdk-js-0.2.2.tgz#b17f93a05a1e7c6790aa690bc731637d71c2db99"
+  dependencies:
+    bottos-crypto-js "^1.0.14"
+    bottos-js-msgpack "^1.0.2"
+    querystring "^0.2.0"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -751,6 +783,10 @@ protobufjs@^6.8.6:
     "@types/long" "^4.0.0"
     "@types/node" "^10.1.0"
     long "^4.0.0"
+
+querystring@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
 readable-stream@^2.3.0, readable-stream@^2.3.5:
   version "2.3.6"

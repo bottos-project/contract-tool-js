@@ -1,0 +1,7 @@
+{
+    "reguser":{
+        "account":{"type":"string"},
+        "age":{"type":"uint32"},
+        "height":{"type":"uint32"}
+    }
+}

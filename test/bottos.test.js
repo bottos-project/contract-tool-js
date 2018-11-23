@@ -12,27 +12,27 @@ let privateKeyBuf = Wallet.recover(config.keystore_pwd,keystore)
 let privateKey = Tool.buf2hex(privateKeyBuf)
 
 describe("test call contract",()=>{
-    // it('reguser in contract',()=>{
-    //     let originFetchTemplate = {
-    //         sender:keystore.account,
-    //         contract:keystore.account,
-    //         method:'reguser',
-    //         param:{
-    //             account:keystore.account,
-    //             age:18,
-    //             height:32
-    //         },
-    //         version:1,
-    //         sig_alg:1
-    //     }
-    //     Contract.callContract(originFetchTemplate,privateKey)
-    //         .then(response=>{
-    //             console.log({response})
-    //         })
-    //         .catch(error=>{
-    //             console.log({error})
-    //         })
-    // })
+    it('reguser in contract',()=>{
+        let originFetchTemplate = {
+            sender:keystore.account,
+            contract:keystore.account,
+            method:'reguser',
+            param:{
+                account:keystore.account,
+                age:18,
+                height:32
+            },
+            version:1,
+            sig_alg:1
+        }
+        Contract.callContract(originFetchTemplate,privateKey)
+            .then(response=>{
+                console.log({response})
+            })
+            .catch(error=>{
+                console.log({error})
+            })
+    })
 
     it('get user info',()=>{
         let abi = Abi["reguser"]
@@ -56,27 +56,27 @@ describe("test call contract",()=>{
             })
     })
 
-    // it("get user info from contract",()=>{
-    //     let originFetchTemplate = {
-    //         sender:keystore.account,
-    //         contract:keystore.account,
-    //         method:'getuserinfo',
-    //         param:{
-    //             account:keystore.account,
-    //             age:18,
-    //             height:32
-    //         },
-    //         version:1,
-    //         sig_alg:1
-    //     }
-    //     Contract.callContract(originFetchTemplate,privateKey)
-    //         .then(response=>{
-    //             console.log({response})
-    //         })
-    //         .catch(error=>{
-    //             console.log({error})
-    //         })
-    // })
+    it("get user info from contract",()=>{
+        let originFetchTemplate = {
+            sender:keystore.account,
+            contract:keystore.account,
+            method:'getuserinfo',
+            param:{
+                account:keystore.account,
+                age:18,
+                height:32
+            },
+            version:1,
+            sig_alg:1
+        }
+        Contract.callContract(originFetchTemplate,privateKey)
+            .then(response=>{
+                console.log({response})
+            })
+            .catch(error=>{
+                console.log({error})
+            })
+    })
 
     // it('check transaction status',()=>{
     //     Tool.getTransactionInfo('9038bf569d15aa9c69bf55e049de978bb905fe95980eac785132f4081a8a36da')

@@ -21,6 +21,7 @@ const deployContract = ()=>{
             throw error
         }else{
             let params = {
+                vm_type:2,    // 1:wasm   2:JavaScript
                 contract_code:data
             }
             let senderInfo = {
@@ -45,13 +46,14 @@ const deployAbi = ()=>{
             throw error
         }else{
             let params = {
-                contract_code:data
+                contract_abi:data,
+                filetype:'js'
             }
             let senderInfo = {
                 account:keystore.account,
                 privateKey:privateKey
             }
-            Contract.deployCode(params,senderInfo)
+            Contract.deployABI(params,senderInfo)
                 .then(response=>{
                     console.log({response})
                 })

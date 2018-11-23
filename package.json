@@ -7,8 +7,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/*.js",
     "deployContract": "node tools/deploy.js --type=contract",
-    "deployAbi": "node tools/deploy.js --type=abi",
-    "account": "node tools/account.js"
+    "deployAbi": "node tools/deploy.js --type=abi"
   },
   "repository": {
     "type": "git",
@@ -20,14 +19,14 @@
     "url": "https://github.com/bottos-project/contract-tool-js/issues"
   },
   "homepage": "https://github.com/bottos-project/contract-tool-js#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "bottos-js-msgpack": "^1.0.4",
+    "bottos-sdk-js": "^0.2.9",
     "commander": "^2.19.0",
     "download-git-repo": "^1.1.0",
-    "ora": "^3.0.0"
-  },
-  "dependencies": {
-    "bottos-sdk-js": "^0.2.5",
     "mocha": "^5.2.0",
+    "ora": "^3.0.0",
     "shelljs": "^0.8.3",
     "yargs": "^12.0.5"
   }

@@ -3,5 +3,10 @@
         "account":{"type":"string"},
         "age":{"type":"uint32"},
         "height":{"type":"uint32"}
+    },
+    "getuserinfo":{
+        "account":{"type":"string"},
+        "age":{"type":"uint32"},
+        "height":{"type":"uint32"}
     }
 }

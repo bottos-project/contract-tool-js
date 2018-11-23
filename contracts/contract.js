@@ -3,7 +3,7 @@ Duktape.modSearch = function (id) {
     var name;
     var src;
     var found = false;
-    name = './vm/duktape/js_lib' + id + '.js';
+    name = './vm/duktape/js_lib/' + id + '.js';
     src = load_js(name);
     if (typeof src === 'string') {
         print('loaded ECMAScript:', name);
@@ -15,16 +15,31 @@ Duktape.modSearch = function (id) {
     return src;
 }
 
-require('index')
+var Bottos = require('index')
+var Lib = Bottos.Lib
+var Storage = Bottos.Storage
+var console = Bottos.console
 
 // regist user
 function reguser(){
-    console.log({Lib,Storage})
     var params = Lib.getParams()
-    console.log(JSON.stringify(params))
     var table = "users"
     var key = params.account
-    var value = JSON.stringify(params)
-    Storage.set(table,key,value)
+    var packStr = Lib.getPack(params)
+    Storage.set(table,key,packStr)
     return 0
 }
+
+// get user
+function getuserinfo(){
+    var params = Lib.getParams()
+    var contract = params.account
+    var table = "users"
+    var key = params.account
+    var userinfo = Storage.get(contract,table,key)
+    var unpacnObj = Lib.getUnpack(userinfo.binValue)
+    print(JSON.stringify(unpacnObj))
+    return 0
+}
+
+

@@ -1,6 +1,6 @@
 {
   "name": "contract-tool-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "bin": "./bin/index.js",
   "main": "index.js",

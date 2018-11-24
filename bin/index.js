@@ -8,7 +8,7 @@ program.version('1.0.0', '-v, --version')
        .command('init <name>')
        .action((name) => {
           spinner.start()
-          download('https://github.com/bottos-project/contract-tool-js.git', name, {clone: true}, (err) => {
+          download('github:https://github.com/bottos-project/contract-tool-js.git', name, {clone: true}, (err) => {
               if(err){
                 spinner.fail('create project failed')
               }else{
